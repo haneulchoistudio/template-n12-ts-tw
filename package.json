@@ -1,0 +1,49 @@
+{
+  "name": "n12-ts-tw",
+  "version": "1.0.0",
+  "description": "This is template repository for web applications using technologies NextJS, TypeScript, TailwindCSS along with customized configurations of ESLint and Prettier",
+  "repository": "https://github.com/haneulchoistudio/template-n12-ts-tw",
+  "author": "haneulchoistudio <haneulchoi.business@gmail.com>",
+  "license": "MIT",
+
+  "engines": {
+    "node": ">=16.8.0 <17.0.0",
+    "npm": "Please use yarn",
+    "yarn": ">=1.19.0"
+  },
+
+  "engineStrict": true,
+
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ./**/*.(ts|tsx|js|jsx)"
+  },
+  "dependencies": {
+    "next": "^13.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.7",
+    "husky": "^8.0.3",
+    "postcss": "^8.4.21",
+    "autoprefix": "^1.0.1",
+    "tailwindcss": "^3.3.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "typescript": "^5.0.4"
+  }
+}
