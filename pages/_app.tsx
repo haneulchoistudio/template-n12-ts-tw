@@ -1,8 +1,8 @@
-import '@studio/styles/default.css'
+import '@style'
 
-import type { SAppProps } from '@studio'
+import type { Props } from 'types'
 
-const StudioApplication = (props: SAppProps) => {
+const StudioApplication = (props: Props) => {
     const { Component, pageProps } = props
 
     const getLayout = Component.getLayout || ((page) => page)

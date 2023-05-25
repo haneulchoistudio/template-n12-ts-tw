@@ -22,6 +22,7 @@
                 "varsIgnorePattern": "^_",
                 "caughtErrorsIgnorePattern": "^_"
             }
-        ]
+        ],
+        "react/prop-types": "warn"
     }
 }

@@ -1,0 +1,4 @@
+/** RESET CSS */
+@import url('./reset/index.css');
+/** TAILWIND CSS */
+@import url('./tailwind/index.css');

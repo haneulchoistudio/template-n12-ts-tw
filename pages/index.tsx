@@ -1,27 +1,22 @@
-import type { SPage, SPageSSRProps, SPageSSRPropsContext } from '@studio'
+import Screen from '@component/shared/Screen'
+import ScreenWrap from '@component/shared/ScreenWrap'
+import type { Page } from 'types'
 
-interface IndexProps {
-    message: string
-}
-
-export const getServerSideProps: SPageSSRProps = async (
-    _context: SPageSSRPropsContext
-) => {
-    return {
-        props: { message: 'Hello World!' },
-    }
-}
-
-const Index: SPage<IndexProps> = ({ message }: IndexProps) => {
+const IndexPage: Page = () => {
     return (
-        <div className="h-screen flex flex-col items-center justify-center">
-            <h1 className="font-extrabold text-2xl">{message}</h1>
-        </div>
+        <Screen
+            variant="screen"
+            className="bg-slate-50 text-slate-800 justify-center items-center"
+        >
+            <ScreenWrap>
+                <h1 className="font-bold text-2xl text-center">IndexPage</h1>
+            </ScreenWrap>
+        </Screen>
     )
 }
 
-Index.getLayout = (page) => {
+IndexPage.getLayout = (page) => {
     return page
 }
 
-export default Index
+export default IndexPage
