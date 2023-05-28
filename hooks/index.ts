@@ -1,4 +1,6 @@
 import { __useInput__ } from './use-input'
+import { __useLanguage__ } from './use-language'
+import { __useTheme__ } from './use-theme'
 
 class Hook {
     public static useInput: <
@@ -16,7 +18,16 @@ class Hook {
         onReset: () => void
         placeholder: string
     }
+
+    public static useTheme: typeof __useTheme__
+    public static useLanguage: typeof __useLanguage__
 }
 
 Hook.useInput = __useInput__
 export const useInput = Hook.useInput
+
+Hook.useLanguage = __useLanguage__
+export const useLanguage = Hook.useLanguage
+
+Hook.useTheme = __useTheme__
+export const useTheme = Hook.useTheme

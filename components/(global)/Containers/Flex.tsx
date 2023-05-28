@@ -1,4 +1,4 @@
-import { classnames } from '@helper'
+import { classnames } from '@/helper'
 
 interface IFlex {
     className?: string

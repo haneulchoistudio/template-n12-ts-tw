@@ -18,17 +18,19 @@
         "baseUrl": ".",
         "paths": {
             // PATH TO STYLES
-            "@style": ["styles/index.css"],
+            "@/style": ["styles/index.css"],
             // PATH TO LIBRARY
-            "@library": ["libs/index.ts"],
+            "@/library": ["libs/index.ts"],
             // PATH TO HOOKS
-            "@hook": ["hooks/index.ts"],
+            "@/hook": ["hooks/index.ts"],
             // PATH TO HELPERS
-            "@helper": ["helpers/index.ts"],
+            "@/helper": ["helpers/index.ts"],
+            // PATH TO CONTEXTS
+            "@/context": ["contexts/index.ts"],
 
             // PATH TO COMPONENTS
-            "@component/shared/*": ["components/(shared)/*"],
-            "@component/landing/*": ["components/(landing)/*"]
+            "@/global-component/*": ["components/(global)/*"],
+            "@/landing-component/*": ["components/(landing)/*"]
         },
         "incremental": true
     },

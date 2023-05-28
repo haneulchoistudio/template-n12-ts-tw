@@ -1,45 +1,39 @@
 import dynamic from 'next/dynamic'
 import type { Page } from 'types'
 
-const pageComponents = {
-    containers: {
-        Screen: dynamic(() => import('@component/shared/containers/Screen')),
+const PageComponent = {
+    Container: {
+        Screen: dynamic(() => import('@/global-component/Containers/Screen')),
         ScreenWrap: dynamic(
-            () => import('@component/shared/containers/ScreenWrap')
+            () => import('@/global-component/Containers/ScreenWrap')
         ),
     },
-    layers: {
-        PrimaryLayer: dynamic(
-            () => import('@component/shared/layers/PrimaryLayer')
-        ),
-        MetaLayer: dynamic(() => import('@component/shared/layers/MetaLayer')),
-        HeaderLayer: dynamic(
-            () => import('@component/shared/layers/HeaderLayer')
-        ),
-        FooterLayer: dynamic(
-            () => import('@component/shared/layers/FooterLayer')
-        ),
+    Layer: {
+        Primary: dynamic(() => import('@/global-component/Layers/Primary')),
+        Meta: dynamic(() => import('@/global-component/Layers/Meta')),
+        Header: dynamic(() => import('@/global-component/Layers/Header')),
+        Footer: dynamic(() => import('@/global-component/Layers/Footer')),
     },
-} as const
+}
 
 const IndexPage: Page = () => {
     return (
         <>
-            <pageComponents.layers.PrimaryLayer>
-                <pageComponents.layers.MetaLayer />
-                <pageComponents.layers.HeaderLayer />
-                <pageComponents.containers.Screen
+            <PageComponent.Layer.Primary>
+                <PageComponent.Layer.Meta />
+                <PageComponent.Layer.Header />
+                <PageComponent.Container.Screen
                     variant="screen"
                     className="bg-white text-black justify-center items-center"
                 >
-                    <pageComponents.containers.ScreenWrap>
-                        <h1 className="font-bold text-2xl text-center">
+                    <PageComponent.Container.ScreenWrap>
+                        <div className="font-sans text-xl lg:text-2xl w-max mx-auto">
                             IndexPage
-                        </h1>
-                    </pageComponents.containers.ScreenWrap>
-                </pageComponents.containers.Screen>
-                <pageComponents.layers.FooterLayer />
-            </pageComponents.layers.PrimaryLayer>
+                        </div>
+                    </PageComponent.Container.ScreenWrap>
+                </PageComponent.Container.Screen>
+                <PageComponent.Layer.Footer />
+            </PageComponent.Layer.Primary>
         </>
     )
 }

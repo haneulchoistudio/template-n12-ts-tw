@@ -9,4 +9,15 @@ declare module 'types' {
     type Props<P = Record<string, unknown>> = {
         Component: Page
     } & AppProps<P>
+
+    type ThemeLight = 'light'
+    type ThemeDark = 'dark'
+    type ThemeOption = [ThemeDark, ThemeLight][number]
+
+    type LanguageOption<T extends string[]> = ['en'][number] | T[number]
+
+    type LocalStorageContextProps<T extends object = {}> = T & {
+        children: React.ReactNode
+        localStorageKey: string
+    }
 }

@@ -1,4 +1,4 @@
-import { classnames } from '@helper'
+import { classnames } from '@/helper'
 
 interface IScreen {
     variant: 'min-screen' | 'screen' | 'auto'
