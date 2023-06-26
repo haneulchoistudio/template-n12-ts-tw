@@ -1,45 +1,24 @@
-import dynamic from 'next/dynamic'
-import type { Page } from 'types'
+import PrimaryLayout from '@/component/layout/PrimaryLayout';
+import type { MetaOption, Page } from 'types';
 
-const PageComponent = {
-    Container: {
-        Screen: dynamic(() => import('@/global-component/Containers/Screen')),
-        ScreenWrap: dynamic(
-            () => import('@/global-component/Containers/ScreenWrap')
-        ),
-    },
-    Layer: {
-        Primary: dynamic(() => import('@/global-component/Layers/Primary')),
-        Meta: dynamic(() => import('@/global-component/Layers/Meta')),
-        Header: dynamic(() => import('@/global-component/Layers/Header')),
-        Footer: dynamic(() => import('@/global-component/Layers/Footer')),
-    },
-}
+const metadata: MetaOption = {
+    title: 'NextJS TailwindCSS and TypeScript Template',
+    description: 'Create Nextjs application usign this template.',
+    keywords: ['NextJS', 'Tailwind', 'TypeScript'],
+};
 
-const IndexPage: Page = () => {
+const Homepage: Page = () => {
     return (
-        <>
-            <PageComponent.Layer.Primary>
-                <PageComponent.Layer.Meta />
-                <PageComponent.Layer.Header />
-                <PageComponent.Container.Screen
-                    variant="screen"
-                    className="bg-white text-black justify-center items-center"
-                >
-                    <PageComponent.Container.ScreenWrap>
-                        <div className="font-sans text-xl lg:text-2xl w-max mx-auto">
-                            IndexPage
-                        </div>
-                    </PageComponent.Container.ScreenWrap>
-                </PageComponent.Container.Screen>
-                <PageComponent.Layer.Footer />
-            </PageComponent.Layer.Primary>
-        </>
-    )
-}
+        <PrimaryLayout metadata={metadata}>
+            <h3 className="p-6 text-2xl font-medium leading-relaxed">
+                NextJS, TailwindCSS, and TypeScript Template
+            </h3>
+        </PrimaryLayout>
+    );
+};
 
-IndexPage.getLayout = (page) => {
-    return page
-}
+Homepage.getLayout = (page) => {
+    return page;
+};
 
-export default IndexPage
+export default Homepage;

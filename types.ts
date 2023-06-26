@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
+import { IconType } from 'react-icons'
 
 declare module 'types' {
     type Page<P = unknown, IP = P> = NextPage<P, IP> & {
@@ -16,8 +17,21 @@ declare module 'types' {
 
     type LanguageOption<T extends string[]> = ['en'][number] | T[number]
 
-    type LocalStorageContextProps<T extends object = {}> = T & {
+    type LocalStorageContextProps<T extends object = object> = T & {
         children: React.ReactNode
         localStorageKey: string
+    }
+
+    type MetaOption = {
+        title?: string
+        description?: string
+        image?: string
+        keywords?: Array<string>
+    }
+
+    type LinkOption = {
+        href?: string
+        name?: string
+        Icon?: IconType
     }
 }

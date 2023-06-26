@@ -6,7 +6,7 @@
     "author": "haneulchoistudio <haneulchoi.business@gmail.com>",
     "license": "MIT",
     "engines": {
-        "node": ">=16.8.0 <17.0.0",
+        "node": ">=18.0.0 <19.0.0",
         "npm": "Please use yarn",
         "yarn": ">=1.19.0"
     },
@@ -25,7 +25,8 @@
         "next": "^13.1.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-icons": "^4.8.0"
+        "react-icons": "^4.8.0",
+        "tailwind-merge": "^1.13.2"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",

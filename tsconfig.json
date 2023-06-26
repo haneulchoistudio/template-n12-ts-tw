@@ -19,8 +19,6 @@
         "paths": {
             // PATH TO STYLES
             "@/style": ["styles/index.css"],
-            // PATH TO LIBRARY
-            "@/library": ["libs/index.ts"],
             // PATH TO HOOKS
             "@/hook": ["hooks/index.ts"],
             // PATH TO HELPERS
@@ -28,9 +26,10 @@
             // PATH TO CONTEXTS
             "@/context": ["contexts/index.ts"],
 
+            // PATH TO LIBRARY
+            "@/library/*": ["libs/*"],
             // PATH TO COMPONENTS
-            "@/global-component/*": ["components/(global)/*"],
-            "@/landing-component/*": ["components/(landing)/*"]
+            "@/component/*": ["components/*"]
         },
         "incremental": true
     },

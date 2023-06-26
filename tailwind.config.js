@@ -9,7 +9,10 @@ module.exports = {
         extend: {
             colors: {},
             maxWidth: { cutoff: '1440px' },
-            fontFamily: { nunito: ['Nunito', 'sans-serif'] },
+            fontFamily: {
+                nunito: ['Nunito', 'sans-serif'],
+                lato: ['Lato', 'sans-serif'],
+            },
             transitionProperty: {
                 smooth: 'all 0.35s ease-in-out cubic-bezier(0.23, 1, 0.32, 1)',
             },
