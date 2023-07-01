@@ -1,13 +1,13 @@
-import '@/style'
-import { LanguageContextProvider, ThemeContextProvider } from '@/context'
-import { AnimatePresence } from 'framer-motion'
+import '~/style';
+import { LanguageContextProvider, ThemeContextProvider } from '~/context';
+import { AnimatePresence } from 'framer-motion';
 
-import type { Props } from 'types'
+import type { Props } from 'types';
 
 const StudioApplication = (props: Props) => {
-    const { Component, pageProps } = props
+    const { Component, pageProps } = props;
 
-    const getLayout = Component.getLayout || ((page) => page)
+    const getLayout = Component.getLayout || ((page) => page);
 
     return (
         <AnimatePresence
@@ -21,7 +21,7 @@ const StudioApplication = (props: Props) => {
                 </LanguageContextProvider>
             </ThemeContextProvider>
         </AnimatePresence>
-    )
-}
+    );
+};
 
-export default StudioApplication
+export default StudioApplication;

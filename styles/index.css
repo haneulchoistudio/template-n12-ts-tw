@@ -2,3 +2,5 @@
 @import url('./reset/index.css');
 /** TAILWIND CSS */
 @import url('./tailwind/index.css');
+/* GLOBAL CSS */
+@import url('./global.css');

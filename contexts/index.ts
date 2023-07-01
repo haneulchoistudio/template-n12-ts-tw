@@ -1,2 +1,2 @@
-export { ThemeContext, ThemeContextProvider } from './theme'
-export { LanguageContext, LanguageContextProvider } from './language'
+export { ThemeContext, ThemeContextProvider } from './theme';
+export { LanguageContext, LanguageContextProvider } from './language';

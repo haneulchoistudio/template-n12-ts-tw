@@ -12,14 +12,14 @@ const MetaLayout: React.FC<MetaLayoutProps> = ({
     return (
         <Head>
             {/* image */}
-            <meta key="og:image" property={image} />
+            <meta name="og:image" property={image} />
             {/* keywords */}
-            <meta key="keywords" property={keywords.join(', ')} />
+            <meta name="keywords" property={keywords.join(', ')} />
             {/* description */}
-            <meta key="og:description" property={description} />
-            <meta key="description" property={description} />
+            <meta name="og:description" property={description} />
+            <meta name="description" property={description} />
             {/* title */}
-            <meta key="og:title" property={title} />
+            <meta name="og:title" property={title} />
             <title>{title}</title>
         </Head>
     );

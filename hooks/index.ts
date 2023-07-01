@@ -1,6 +1,6 @@
-import { __useInput__ } from './use-input'
-import { __useLanguage__ } from './use-language'
-import { __useTheme__ } from './use-theme'
+import { __useInput__ } from './use-input';
+import { __useLanguage__ } from './use-language';
+import { __useTheme__ } from './use-theme';
 
 class Hook {
     public static useInput: <
@@ -13,21 +13,21 @@ class Hook {
         value: T,
         option?: { placeholder?: string }
     ) => {
-        value: T | ''
-        onChange: (e: React.ChangeEvent<E>) => void
-        onReset: () => void
-        placeholder: string
-    }
+        value: T | '';
+        onChange: (e: React.ChangeEvent<E>) => void;
+        onReset: () => void;
+        placeholder: string;
+    };
 
-    public static useTheme: typeof __useTheme__
-    public static useLanguage: typeof __useLanguage__
+    public static useTheme: typeof __useTheme__;
+    public static useLanguage: typeof __useLanguage__;
 }
 
-Hook.useInput = __useInput__
-export const useInput = Hook.useInput
+Hook.useInput = __useInput__;
+export const useInput = Hook.useInput;
 
-Hook.useLanguage = __useLanguage__
-export const useLanguage = Hook.useLanguage
+Hook.useLanguage = __useLanguage__;
+export const useLanguage = Hook.useLanguage;
 
-Hook.useTheme = __useTheme__
-export const useTheme = Hook.useTheme
+Hook.useTheme = __useTheme__;
+export const useTheme = Hook.useTheme;

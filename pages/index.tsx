@@ -1,5 +1,12 @@
-import PrimaryLayout from '@/component/layout/PrimaryLayout';
 import type { MetaOption, Page } from 'types';
+import { FiAirplay } from 'react-icons/fi';
+import Button from '~/component/button/Button';
+import PrimaryLayout from '~/component/layout/PrimaryLayout';
+import PageLink from '~/component/link/PageLink';
+import Nav from '~/component/nav/Nav';
+import P from '~/component/typography/P';
+import H2 from '~/component/typography/H2';
+import HeroText from '~/component/page/HeroText';
 
 const metadata: MetaOption = {
     title: 'NextJS TailwindCSS and TypeScript Template',
@@ -10,9 +17,7 @@ const metadata: MetaOption = {
 const Homepage: Page = () => {
     return (
         <PrimaryLayout metadata={metadata}>
-            <h3 className="p-6 text-2xl font-medium leading-relaxed">
-                NextJS, TailwindCSS, and TypeScript Template
-            </h3>
+            <HeroText title="NextJS 12, Tailwindcss, and TypeScript Template" />
         </PrimaryLayout>
     );
 };

@@ -1,6 +1,6 @@
-import { LanguageContext } from '@/context'
-import { useContext } from 'react'
+import { LanguageContext } from '~/context';
+import { useContext } from 'react';
 
-const __useLanguage__ = () => useContext(LanguageContext)
+const __useLanguage__ = () => useContext(LanguageContext);
 
-export { __useLanguage__ }
+export { __useLanguage__ };

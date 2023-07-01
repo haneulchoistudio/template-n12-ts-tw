@@ -5,6 +5,6 @@ const nextConfig = {
     trailingSlash: true,
     images: { domains: [] },
     experimental: {},
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

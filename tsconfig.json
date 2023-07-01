@@ -18,18 +18,18 @@
         "baseUrl": ".",
         "paths": {
             // PATH TO STYLES
-            "@/style": ["styles/index.css"],
+            "~/style": ["styles/index.css"],
             // PATH TO HOOKS
-            "@/hook": ["hooks/index.ts"],
+            "~/hook": ["hooks/index.ts"],
             // PATH TO HELPERS
-            "@/helper": ["helpers/index.ts"],
+            "~/helper": ["helpers/index.ts"],
             // PATH TO CONTEXTS
-            "@/context": ["contexts/index.ts"],
+            "~/context": ["contexts/index.ts"],
 
             // PATH TO LIBRARY
-            "@/library/*": ["libs/*"],
+            "~/library/*": ["libs/*"],
             // PATH TO COMPONENTS
-            "@/component/*": ["components/*"]
+            "~/component/*": ["components/*"]
         },
         "incremental": true
     },

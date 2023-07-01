@@ -13,9 +13,7 @@ const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({
     return (
         <>
             <MetaLayout {...metadata} />
-            <div id="__next__layout" className="__next__layout__class">
-                {children}
-            </div>
+            <div id="__primary">{children}</div>
         </>
     );
 };
