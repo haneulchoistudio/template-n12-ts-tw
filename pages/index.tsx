@@ -1,11 +1,5 @@
 import type { MetaOption, Page } from 'types';
-import { FiAirplay } from 'react-icons/fi';
-import Button from '~/component/button/Button';
 import PrimaryLayout from '~/component/layout/PrimaryLayout';
-import PageLink from '~/component/link/PageLink';
-import Nav from '~/component/nav/Nav';
-import P from '~/component/typography/P';
-import H2 from '~/component/typography/H2';
 import HeroText from '~/component/page/HeroText';
 
 const metadata: MetaOption = {

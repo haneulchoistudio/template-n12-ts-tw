@@ -1,5 +1,4 @@
 import Style from './__modalbg.module.css';
-import type { ComponentType } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface ModalBgProps {
