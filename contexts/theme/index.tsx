@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import type { LocalStorageContextProps, ThemeOption } from 'types';
+import type { LocalStorageContextProps, ThemeOption } from '../context_types';
 
 const ThemeContext = createContext<{
     theme: ThemeOption;

@@ -1,10 +1,9 @@
 import '~/style';
 import { LanguageContextProvider, ThemeContextProvider } from '~/context';
 import { AnimatePresence } from 'framer-motion';
+import type { NextJsPageProps } from 'types';
 
-import type { Props } from 'types';
-
-const StudioApplication = (props: Props) => {
+const StudioApplication = (props: NextJsPageProps) => {
     const { Component, pageProps } = props;
 
     const getLayout = Component.getLayout || ((page) => page);

@@ -1,0 +1,31 @@
+.h1-base {
+    @apply font-bold text-4xl md:text-5xl lg:text-6xl;
+}
+
+.h2-base {
+    @apply font-bold text-2xl md:text-3xl lg:text-4xl;
+}
+
+.h3-base {
+    @apply font-semibold text-xl md:text-2xl lg:text-3xl;
+}
+
+.h4-base {
+    @apply font-medium text-lg md:text-xl lg:text-2xl;
+}
+
+.h5-base {
+    @apply font-medium text-base md:text-lg lg:text-xl;
+}
+
+.h6-base {
+    @apply font-normal text-sm md:text-base lg:text-lg;
+}
+
+.p-base {
+    @apply font-normal leading-relaxed lg:text-lg lg:leading-relaxed;
+}
+
+.span-base {
+    @apply leading-relaxed;
+}

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
-import { LocalStorageContextProps } from 'types';
+import type { LocalStorageContextProps } from '../context_types';
 
 const Languages = ['en', 'ko', 'jp'] as const;
 type Language = (typeof Languages)[number];

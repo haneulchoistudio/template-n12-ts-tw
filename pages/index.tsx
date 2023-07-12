@@ -1,18 +1,30 @@
-import type { MetaOption, Page } from 'types';
-import PrimaryLayout from '~/component/layout/PrimaryLayout';
-import HeroText from '~/component/page/HeroText';
+import type { NextJsPage, NextJsPageMetaOption } from 'types';
+import MetaLayout from '~/component/Layouts/PageLayout/MetaLayout';
+import PageLayout from '~/component/Layouts/PageLayout/PageLayout';
+import TextVariant from '~/component/Variants/TextVariant/TextVariant';
 
-const metadata: MetaOption = {
-    title: 'NextJS TailwindCSS and TypeScript Template',
-    description: 'Create Nextjs application usign this template.',
-    keywords: ['NextJS', 'Tailwind', 'TypeScript'],
+const metadata: NextJsPageMetaOption = {
+    title: '',
+    description: '',
+    keywords: [],
+    image: '',
 };
 
-const Homepage: Page = () => {
+const Homepage: NextJsPage = () => {
     return (
-        <PrimaryLayout metadata={metadata}>
-            <HeroText title="NextJS 12, Tailwindcss, and TypeScript Template" />
-        </PrimaryLayout>
+        <>
+            <MetaLayout {...metadata} />
+            <PageLayout>
+                <div className="h-screen flex flex-col justify-center items-center">
+                    <TextVariant variant="h1" className="mb-1 lg:mb-2">
+                        Yo Yo!
+                    </TextVariant>
+                    <TextVariant className="text-neutral-500">
+                        This is a sample nextjs 12 template.
+                    </TextVariant>
+                </div>
+            </PageLayout>
+        </>
     );
 };
 
