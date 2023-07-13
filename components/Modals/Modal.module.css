@@ -1,0 +1,11 @@
+.main {
+    @apply fixed top-0 left-0 h-screen flex flex-col justify-center items-center z-50 backdrop-blur-md;
+}
+
+.wrap {
+    @apply px-5 py-6 max-w-cutoff mx-auto;
+}
+
+.close-button {
+    @apply fixed top-6 right-5 w-[40px] h-[40px] bg-neutral-800 text-pink-500 flex justify-center items-center rounded-full lg:hover:opacity-75 lg:hover:shadow-2xl;
+}

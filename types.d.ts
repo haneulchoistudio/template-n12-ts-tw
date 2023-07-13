@@ -15,5 +15,5 @@ export type NextJsPageMetaOption<
     title?: string;
     description?: string;
     image?: string;
-    keywords: Array<string>;
+    keywords?: Array<string>;
 };

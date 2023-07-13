@@ -4,10 +4,10 @@ import type { NextJsPageMetaOption } from 'types';
 type MetaLayoutProps = NextJsPageMetaOption;
 
 const MetaLayout: React.FC<MetaLayoutProps> = ({
-    title,
-    keywords,
-    description,
-    image,
+    title = '',
+    keywords = [],
+    description = '',
+    image = '',
 }) => {
     return (
         <Head>

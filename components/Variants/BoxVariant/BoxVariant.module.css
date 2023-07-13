@@ -1,0 +1,9 @@
+.div,
+.article,
+.section {
+    @apply w-full;
+}
+
+.span {
+    @apply w-max;
+}

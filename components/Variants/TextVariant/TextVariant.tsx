@@ -1,6 +1,6 @@
-import TextVariantStyle from './_.module.css';
+import TextVariantStyle from './TextVariant.module.css';
 import { twMerge } from 'tailwind-merge';
-import type { TextVariant } from '~/component/component_types';
+import type { TextVariant } from './types';
 
 interface TextVariantProps {
     variant?: TextVariant;
