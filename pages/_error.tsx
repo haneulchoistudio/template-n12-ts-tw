@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import type { NextJsPageMetaOption } from 'types';
 import MetaLayout from '~/component/Layouts/PageLayout/MetaLayout';
 import PageLayout from '~/component/Layouts/PageLayout/PageLayout';
 import BoxVariant from '~/component/Variants/BoxVariant/BoxVariant';
 import TextVariant from '~/component/Variants/TextVariant/TextVariant';
 
-const Error = ({ statusCode, requestedPage }) => {
+const ErrorPage = ({ statusCode, requestedPage }) => {
     const errorCodes = {
         404: {
             code: 404,
@@ -22,6 +24,17 @@ const Error = ({ statusCode, requestedPage }) => {
     const metadata: NextJsPageMetaOption = {
         title: errorCodes[statusCode].title,
     };
+
+    const router = useRouter();
+
+    useEffect(() => {
+        router.replace({
+            query: {
+                statusCode,
+                requestedPage,
+            },
+        });
+    }, []);
 
     return (
         <>
@@ -57,7 +70,7 @@ const Error = ({ statusCode, requestedPage }) => {
     );
 };
 
-Error.getInitialProps = ({ res, err, asPath }) => {
+ErrorPage.getInitialProps = ({ res, err, asPath }) => {
     const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
     const requestedPage = asPath
         .slice(1, asPath.length - 1)
@@ -68,4 +81,4 @@ Error.getInitialProps = ({ res, err, asPath }) => {
     };
 };
 
-export default Error;
+export default ErrorPage;

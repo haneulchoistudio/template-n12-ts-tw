@@ -3,14 +3,10 @@ import ModalStyle from './Modal.module.css';
 import BoxVariant from '../Variants/BoxVariant/BoxVariant';
 import Button from '../Buttons/Button';
 import { AiOutlineClose } from 'react-icons/ai';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 interface ModalBackgroundProps {
     children: React.ReactNode;
-
     className?: string;
-
     show?: boolean;
     onHide?: () => void;
 }
@@ -21,12 +17,6 @@ const Modal: React.FC<ModalBackgroundProps> = ({
     show,
     onHide,
 }) => {
-    const router = useRouter();
-
-    useEffect(() => {
-        console.log(router);
-    }, []);
-
     return (
         <BoxVariant
             className={twMerge(

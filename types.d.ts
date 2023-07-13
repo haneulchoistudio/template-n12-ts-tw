@@ -17,3 +17,10 @@ export type NextJsPageMetaOption<
     image?: string;
     keywords?: Array<string>;
 };
+
+export type NextjsErrorPageProps<
+    T extends object = unknown,
+    StatusCode extends number = 404 | 500
+> = T & {
+    statuaCode: StatusCode;
+};
